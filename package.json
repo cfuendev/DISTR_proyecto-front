@@ -1,0 +1,35 @@
+{
+  "name": "unocss-lit-ts",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./dist/my-element.es.js"
+  },
+  "main": "dist/my-element.es.js",
+  "types": "types/my-element.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "lit": "^2.8.0"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.1.37",
+    "@unocss/core": "latest",
+    "@unocss/preset-attributify": "latest",
+    "@unocss/preset-icons": "latest",
+    "@unocss/preset-typography": "latest",
+    "typescript": "^5.2.2",
+    "unocss": "latest",
+    "vite": "^4.4.11",
+    "vite-plugin-inspect": "^0.7.40"
+  },
+  "stackblitz": {
+    "installDependencies": false,
+    "startCommand": "node .stackblitz.mjs && npm install && npm run dev"
+  }
+}
