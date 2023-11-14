@@ -1,3 +1,8 @@
-# DISTR_proyecto-front
+#  lit-unocss-hmr
 
-[Edit in Codeflow ⚡️](https://stackblitz.com/~/github.com/cfuendev/DISTR_proyecto-front)
+The ultimate Lit + UnoCSS starter
+
+- Unocss on Global Mode for app's entry html
+- Unocss on Shadow Mode for Lit web components
+- Hot web component rebuild on change
+- Hot module reload on component rebuild

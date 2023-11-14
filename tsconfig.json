@@ -3,7 +3,7 @@
     "lib": ["es2017", "dom", "dom.iterable"],
     "useDefineForClassFields": false,
     "experimentalDecorators": true,
-    "rootDir": "./src",
+    "rootDir": "./",
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
@@ -17,6 +17,6 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*.ts"],
-  "exclude": []
+  "include": ["./"],
+  "exclude": ["./src/components/*/**"]
 }

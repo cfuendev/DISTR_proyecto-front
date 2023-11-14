@@ -1,16 +1,18 @@
 {
-  "name": "@cfuenlabs/unocss-lit",
-  "version": "0.0.0",
-  "types": "types/navbar.d.ts",
+  "name": "components",
+  "version": "1.0.0",
+  "exports": {
+    "./example-element.ts": "./dist/my-element.mjs",
+    "./example-element2.ts": "./dist/my-element2.mjs"
+  },
   "files": [
     "dist",
     "types"
   ],
   "scripts": {
-    "build-lib": "cd src/components/dist && pnpm build",
-    "build-lib-watch": "cd src/components/dist && pnpm build-watch",
+    "dev": "vite",
     "build": "tsc && vite build",
-    "dev": "concurrently \"vite\" \"pnpm build-lib-watch\""
+    "build-watch": "tsc && vite build --watch"
   },
   "dependencies": {
     "lit": "^2.8.0"
@@ -21,7 +23,6 @@
     "@unocss/preset-attributify": "latest",
     "@unocss/preset-icons": "latest",
     "@unocss/preset-typography": "latest",
-    "concurrently": "^8.2.2",
     "typescript": "^5.2.2",
     "unocss": "latest",
     "vite": "^4.4.11",

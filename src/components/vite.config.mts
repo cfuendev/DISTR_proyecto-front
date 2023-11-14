@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+
 import UnoCSS from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
 import presetUno from '@unocss/preset-uno'
@@ -10,7 +11,7 @@ import ViteInspector from 'vite-plugin-inspect'
 export default defineConfig({
   build: {
     lib: {
-      entry: 'src/my-element.ts',
+      entry: ['example-element.ts', 'example-element2.ts'],
       formats: ['es'],
     },
     rollupOptions: {
@@ -21,9 +22,9 @@ export default defineConfig({
     UnoCSS({
       mode: 'shadow-dom',
       shortcuts: [
-        { logo: 'i-logos-webcomponents w-6em h-6em transform transition-800 hover:rotate-180' },
-        { 'cool-blue': 'bg-blue-500 text-white' },
-        { 'cool-green': 'bg-green-500 text-black' },
+        ['sl-input-border', 'border-solid border-[var(--sl-input-border-color)] border-1'],
+        ['sl-panel-bg', 'bg-[var(--sl-panel-background-color)]'],
+        ['sl-shadow-sm', 'shadow-[var(--sl-shadow-x-small)]'],
       ],
       presets: [
         presetUno(),
